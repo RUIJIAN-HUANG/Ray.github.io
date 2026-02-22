@@ -41,20 +41,22 @@ html {
   background: transparent !important;
 }
 
-/* 内容区域全透明 */
+/* 内容区域全透明，透出壁纸背景 */
 #page,
 .main-content,
 .content-wrap,
 #content,
 .container,
-#main-content {
+#main-content,
+.layout_post-list,
+.layout_page {
   background: transparent !important;
   box-shadow: none !important;
   border: none !important;
 }
 
 /* ========================================
-   页面样式（你原来的全部保留）
+   页面样式（卡片、侧边栏等保持半透明）
    ======================================== */
 .layout_post-list .post-item,
 .sidebar,
@@ -80,7 +82,7 @@ a:hover {
 }
 
 /* ========================================
-   标题文字位置（你原来的）
+   标题文字位置
    ======================================== */
 #page-header.full_page #site-info {
   transform: translateY(-40px);
@@ -95,7 +97,7 @@ a:hover {
 }
 
 /* ========================================
-   文章动画 + 看板娘（你原来的）
+   文章动画 + 看板娘
    ======================================== */
 .layout_post-list .post-item {
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
