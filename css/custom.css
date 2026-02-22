@@ -108,3 +108,17 @@ a:hover {
   margin-bottom: 20px !important;
   z-index: 999 !important;
 }
+
+/* ========================================
+   关键：实现“先看壁纸，滚动后显示内容”
+   ======================================== */
+/* 让整个页面内容从视口下方开始，初始不可见 */
+#body-wrap {
+  margin-top: 100vh !important;
+}
+
+/* 优化滚动体验 */
+html, body {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
