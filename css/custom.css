@@ -5,9 +5,6 @@ body {
   background: url(/img/xuenai.jpg) no-repeat fixed center center !important;
   background-size: cover !important;
   position: relative;
-  margin: 0 !important;
-  padding: 0 !important;
-  min-height: 100vh !important;
 }
 
 body::before {
@@ -25,27 +22,7 @@ body::before {
 
 /* 全局深色兜底 */
 html {
-  background-color: transparent !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  min-height: 100vh !important;
-}
-
-/* ========================================
-   强制所有容器透明，让背景显示出来
-   ======================================== */
-#body-wrap,
-#page,
-.main-content,
-.content-wrap,
-#content,
-.container,
-.main,
-#app,
-#main-content {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
+  background-color: #121212 !important;
 }
 
 /* ========================================
@@ -107,26 +84,4 @@ a:hover {
   margin-right: 10px !important;
   margin-bottom: 20px !important;
   z-index: 999 !important;
-}
-
-/* ========================================
-   实现“先看背景，滚动后才看到内容”的效果
-   ======================================== */
-
-/* 1. 让页面内容整体从视口下方开始 */
-#body-wrap {
-  margin-top: 100vh !important;
-  position: relative !important;
-}
-
-/* 2. 让 Banner 区域正常显示，不再强制占满视口 */
-#page-header.full_page {
-  height: auto !important;
-  min-height: auto !important;
-}
-
-/* 3. 优化滚动体验 */
-html, body {
-  overflow-x: hidden !important;
-  scroll-behavior: smooth;
 }
