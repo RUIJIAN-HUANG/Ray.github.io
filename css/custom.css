@@ -85,3 +85,46 @@ a:hover {
   margin-bottom: 20px !important;
   z-index: 999 !important;
 }
+
+
+
+/* ========================================
+   实现全屏无白边沉浸效果
+   ======================================== */
+
+/* 1. 让 html 和 body 占满整个视口，清除默认边距 */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh !important;
+  height: 100% !important;
+}
+
+/* 2. 让页面主容器透明，无背景色 */
+#page,
+.main-content,
+.content-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 3. 让文章卡片保持半透深色，悬浮在背景上 */
+.layout_post-list .post-item {
+  background: rgba(18, 18, 18, 0.85) !important;
+  margin-bottom: 20px !important; /* 增加卡片间距，避免拥挤 */
+}
+
+/* 4. 让页脚完全透明，不显示任何背景 */
+.footer-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: #f5f5f5 !important;
+}
+
+/* 5. 确保导航栏也透明，融合背景 */
+#header {
+  background: transparent !important;
+  box-shadow: none !important;
+}
